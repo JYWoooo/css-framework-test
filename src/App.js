@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import Tailwind from "./component/Tailwind";
+import Mui from "./component/Mui"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // 확인 하려는 css framework 쪽의 주석 해제
+    
+    <Tailwind />
+    // <Mui />
+  )
 }
 
 export default App;
