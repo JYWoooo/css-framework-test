@@ -1,6 +1,8 @@
+import React from 'react'
+
 export default function Tailwind() {
   return (
-    <div class='m-10 ' style={{maxWidth: `90%`, marginLeft: `5%`}}>
+    <div class='m-10 '>
       <h1 className="text-3xl font-bold text-gray-700 my-5">
         장비 기본설정
       </h1>

@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 3),
   },
   paper: {
-    maxWidth: '90%',
     margin: `${theme.spacing(1)}px auto`,
     paddingRight: '30px',
     paddingLeft: '30px',
@@ -66,7 +65,7 @@ const Mui = () => {
 
   return (
     <div className={classes.root}>
-      <Typography style={{fontSize: `30px`, fontWeight: `bolder`, marginLeft: `5%`, marginTop: `20px`, marginBottom: `20px`, color: `#191970`}}>
+      <Typography style={{fontSize: `30px`, fontWeight: `bolder`, marginTop: `20px`, marginBottom: `20px`, color: `#191970`}}>
         장비 기본 설정
       </Typography>
       
@@ -74,13 +73,13 @@ const Mui = () => {
         <Grid container spacing={4} justifyContent="space-between" alignItems='center' className={classes.grid}>
           <Grid item>
             <Grid container display='inline-flex' direction='row' alignItems='center'>
-              <Typography noWrep>모델명</Typography>
+              <Typography>모델명</Typography>
               <TextField label='모델명' variant='outlined' className={classes.textField} />
             </Grid>
           </Grid>
           <Grid item>
             <Grid container display='inline-flex' direction='row' alignItems='center'>
-              <Typography noWrep>시리얼 넘버</Typography>
+              <Typography>시리얼 넘버</Typography>
               <TextField label='시리얼 넘버' variant='outlined' className={classes.textField} />
             </Grid>
           </Grid>
@@ -93,7 +92,7 @@ const Mui = () => {
       </Paper>
 
       <Paper className={classes.paper} variant='outlined'>
-        <Grid direction='column'>
+        <Grid container direction='column'>
           <Grid item>
             <Typography className={classes.title}>시간 설정</Typography>
           </Grid>
@@ -101,13 +100,13 @@ const Mui = () => {
             <Grid container spacing={4} justifyContent="space-between" alignItems='center' className={classes.timeGrid}>
               <Grid item>
                 <Grid container display='inline-flex' direction='row' alignItems='center'>
-                  <Typography noWrep>날짜 및 시간</Typography>
+                  <Typography>날짜 및 시간</Typography>
                   <TextField label='날짜 및 시간' variant='outlined' className={classes.textField} />
                 </Grid>
               </Grid>
               <Grid item>
                 <Grid container display='inline-flex' direction='row' alignItems='center'>
-                  <Typography noWrep>표준 시간대</Typography>
+                  <Typography>표준 시간대</Typography>
                   <TextField label='표준 시간대' variant='outlined' className={classes.textField} />
                 </Grid>
               </Grid>
@@ -122,7 +121,7 @@ const Mui = () => {
       </Paper>
 
       <Paper className={classes.paper} variant='outlined'>
-        <Grid direction='column'>
+        <Grid container direction='column'>
           <Grid item>
             <Typography className={classes.title}>네트워크 설정</Typography>
           </Grid>
@@ -133,19 +132,19 @@ const Mui = () => {
               </Grid>
               <Grid item>
                 <Grid container display='inline-flex' direction='row' alignItems='center'>
-                  <Typography noWrep>IP 주소</Typography>
+                  <Typography>IP 주소</Typography>
                   <TextField label='IP 주소' variant='outlined' className={classes.textField} />
                 </Grid>
               </Grid>
               <Grid item>
                 <Grid container display='inline-flex' direction='row' alignItems='center'>
-                  <Typography noWrep>NETMASK</Typography>
+                  <Typography>NETMASK</Typography>
                   <TextField label='NETMASK' variant='outlined' className={classes.networkTextField} />
                 </Grid>
               </Grid>
               <Grid item>
                 <Grid container display='inline-flex' direction='row' alignItems='center'>
-                  <Typography noWrep>GATEWAY</Typography>
+                  <Typography>GATEWAY</Typography>
                   <TextField label='GATEWAY' variant='outlined' className={classes.networkTextField} />
                 </Grid>
               </Grid>
@@ -156,34 +155,33 @@ const Mui = () => {
               </Grid>
               <Grid item>
                 <Grid container display='inline-flex' direction='row' alignItems='center'>
-                  <Typography noWrep>IP 주소</Typography>
+                  <Typography>IP 주소</Typography>
                   <TextField label='IP 주소' variant='outlined' className={classes.textField} />
                 </Grid>
               </Grid>
               <Grid item>
                 <Grid container display='inline-flex' direction='row' alignItems='center'>
-                  <Typography noWrep>NETMASK</Typography>
+                  <Typography>NETMASK</Typography>
                   <TextField label='NETMASK' variant='outlined' className={classes.networkTextField} />
                 </Grid>
               </Grid>
               <Grid item>
                 <Grid container display='inline-flex' direction='row' alignItems='center'>
-                  <Typography noWrep>GATEWAY</Typography>
+                  <Typography>GATEWAY</Typography>
                   <TextField label='GATEWAY' variant='outlined' className={classes.networkTextField} />
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item direction='column' style={{display: "flex", justifyContent: "center", alignItems: "center",}}>
-              <Button variant='contained' color="primary" size='large' style={{width: '180px', height: '50px'}}>
+            <Grid item>
+              <Grid container direction='column' style={{display: "flex", justifyContent: "center", alignItems: "center",}}>
+                <Button variant='contained' color="primary" size='large' style={{width: '180px', height: '50px'}}>
                 네트워크 설정 적용
-              </Button>
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Paper>
-
-
-
     </div>
   );
 }
